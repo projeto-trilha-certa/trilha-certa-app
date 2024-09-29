@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trilha-certa"
+description = "Django app that exposes a frontend for students to register in classes"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    {name = "Edson Ishkawa", email = "ishkawa@unb.com"},
+    {name = "Lucas Moura", email = "lucas.moura_catron@outlook.com"},
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Database :: Front-Ends",
+]
+dependencies = [
+  "django~=5.1",
+  "hatch~=1.12.0"
+]
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/projeto-trilha-certa/trilha-certa-app.git"
+
+[tool.hatch.version]
+path = "src/trilha_certa/__init__.py"
+search-paths = ["src"]
